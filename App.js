@@ -1,7 +1,8 @@
 import React from 'react';
+import { StackNavigator } from 'react-navigation';
 import { Home } from './app/views/Home';
 import { Contact } from './app/views/Contact';
-import { StackNavigator } from 'react-navigation';
+import { Video } from './app/views/Video'
 
 const MyRoutes = StackNavigator({
   HomeRT: {
@@ -10,6 +11,9 @@ const MyRoutes = StackNavigator({
   ContactRT: {
     screen: Contact
   },
+  LessonsRT: {
+    screen: Video
+  }
 },
   {
     initialRouteName: 'HomeRT'

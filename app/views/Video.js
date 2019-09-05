@@ -12,7 +12,7 @@ export class Video extends React.Component {
     }
 
     componentDidMount() {
-        return fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=pluralsight&type=video&key=AIzaSyC3PT_WKdlngPACw49H4rPWJgHChAMExU4')
+        return fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=Marvel%20Entertainment&type=video&key=AIzaSyC3PT_WKdlngPACw49H4rPWJgHChAMExU4')
             .then(response => response.json())
             .then(responseJson => {
                 this.setState({
@@ -26,6 +26,7 @@ export class Video extends React.Component {
     }
 
     render() {
+        const { navigate } = this.props.navigation;
         return (
             <View>
                 {this.state.listLoaded && (
@@ -34,6 +35,7 @@ export class Video extends React.Component {
                             data={this.state.videoList}
                             renderItem={({ item }) =>
                                 <TubeItem
+                                    navigate={navigate}
                                     id={item.id.videoId}
                                     title={item.snippet.title}
                                     imageSrc={item.snippet.thumbnails.high.url}
@@ -42,7 +44,7 @@ export class Video extends React.Component {
                         />
                     </View>
                 )}
-                { !this.state.listLoaded && (
+                {!this.state.listLoaded && (
                     <View style={styles.container}>
                         <Text> LOADING..., </Text>
                     </View>
@@ -68,16 +70,16 @@ const styles = StyleSheet.create({
 
 export class TubeItem extends React.Component {
     onPress = () => {
-        console.log(this.props.id);
+        this.props.navigate('VideoDetailRT', {youtubeId: this.props.id});
     };
 
     render() {
-        return(
+        return (
             <TouchableWithoutFeedback onPress={this.onPress}>
                 <View style={styles.video}>
                     <Image
-                    style={styles.thumbnail}
-                    source={{ uri: this.props.imageSrc }}
+                        style={styles.thumbnail}
+                        source={{ uri: this.props.imageSrc }}
                     />
                     <Text>
                         {this.props.title}

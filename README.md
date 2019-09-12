@@ -1,7 +1,7 @@
 # MARVEL 
 
 ## An online marvel app
-## Contains many marvel videos and action scene
+## Contains many marvel videos and action scenes
 
 Get entertained and also trained with the Marvel Video lessons available inside the app.
 

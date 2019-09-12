@@ -25,16 +25,16 @@ export class Register extends React.Component {
     };
 
     cancelRegister = () => {
-        Alert.alert('Registration Cancelled');
+        Alert.alert('Marvel Enroll Cancelled');
         this.props.navigation.navigate('HomeRT');
     };
 
     registerAccount = () => {
         if (!this.state.username) {
-            Alert.alert('Please enter a username');
+            Alert.alert('Please enter a Marvel Name (Username)');
         }
         else if (this.state.password !== this.state.passwordConfirm) {
-            Alert.alert('Password do not match');
+            Alert.alert('Codeword do not match');
         }
         else {
             AsyncStorage.getItem(this.state.username, (err, result) => {
@@ -44,7 +44,7 @@ export class Register extends React.Component {
                 else {
                     AsyncStorage.setItem(this.state.username, this.state.password,
                         (err, result) => {
-                            Alert.alert(`${this.state.username} account is created.`);
+                            Alert.alert(`${this.state.username} is enrolled. You are a Super Hero now.`);
                             this.props.navigation.navigate('HomeRT');
                         });
                 }
@@ -55,15 +55,15 @@ export class Register extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.heading}>Register Account</Text>
-                <Text style={styles.label}>Enter Username</Text>
+                <Text style={styles.heading}>MARVEL ENROLL</Text>
+                <Text style={styles.label}>Choose a Marvel Name</Text>
                 <TextInput
                     style={styles.inputs}
                     onChangeText={(text) => this.setState({ username: text })}
                     value={this.state.username}
                     placeholder={'Username'}
                 />
-                <Text style={styles.label}>Enter Password</Text>
+                <Text style={styles.label}>Marvel Codeword</Text>
                 <TextInput
                     style={styles.inputs}
                     onChangeText={(text) => this.setState({ password: text })}
@@ -71,7 +71,7 @@ export class Register extends React.Component {
                     placeholder={'Password'}
                     secureTextEntry={true}
                 />
-                <Text style={styles.label}>Confirm Password</Text>
+                <Text style={styles.label}>Confirm Codeword</Text>
                 <TextInput
                     style={styles.inputs}
                     onChangeText={(text) => this.setState({ passwordConfirm: text })}
@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
         minWidth: '50%'
     },
     submitButton: {
-        backgroundColor: '#35605a',
+        backgroundColor: '#990000',
         textAlign: 'center'
     },
     cancelButton: {

@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
         minWidth: '50%'
     },
     sendButton: {
-        backgroundColor: '#35605a',
+        backgroundColor: '#660000',
         textAlign: 'center'
     },
     clearButton: {

@@ -24,28 +24,28 @@ export class Login extends React.Component {
     };
 
     cancelLogin = () => {
-        Alert.alert('Login Cancelled');
+        Alert.alert('Transformation Cancelled');
         this.props.navigation.navigate('HomeRT');
     };
 
     loginUser = () => {
         if (!this.state.username) {
-            Alert.alert('Please enter a username');
+            Alert.alert('Please enter a Marvel Name');
         }
         else if (!this.state.password) {
-            Alert.alert('Please enter a password');
+            Alert.alert('Please enter a Codeword');
         }
         else {
             AsyncStorage.getItem('userLoggedIn', (err, result) => {
                 if (result !== 'none') {
-                    Alert.alert(`${result} is already logged in`);
+                    Alert.alert(`${result} is already working`);
                     this.props.navigation.navigate('HomeRT');
                 }
                 else {
                     AsyncStorage.getItem(this.state.username, (err, result) => {
                         if (result !== null) {
                             if (result !== this.state.password) {
-                                Alert.alert('Invalid Username or Password');
+                                Alert.alert('Invalid Marvel Name or Codeword');
                             }
                             else {
                                 AsyncStorage.setItem('userLoggedIn', this.state.username,
@@ -56,7 +56,7 @@ export class Login extends React.Component {
                             }
                         }
                         else {
-                            Alert.alert(`${this.state.username} is not registered`);
+                            Alert.alert(`${this.state.username} is not a Marvel Hero (Account doesnt exist)`);
                         }
                     });
                 }
@@ -67,15 +67,15 @@ export class Login extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.heading}>Login</Text>
-                <Text style={styles.label}>Enter Username</Text>
+                <Text style={styles.heading}>TRANSFORM AS SUPERHERO</Text>
+                <Text style={styles.label}>Enter Marvel Name</Text>
                 <TextInput
                     style={styles.inputs}
                     onChangeText={(text) => this.setState({ username: text })}
                     value={this.state.username}
                     placeholder={'Username'}
                 />
-                <Text style={styles.label}>Enter Password</Text>
+                <Text style={styles.label}>Enter Codeword</Text>
                 <TextInput
                     style={styles.inputs}
                     onChangeText={(text) => this.setState({ password: text })}
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
         paddingTop: '10%'
     },
     heading: {
-        fontSize: 50,
+        fontSize: 30,
         flex: 2
     },
     inputs: {
@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
         minWidth: '50%'
     },
     submitButton: {
-        backgroundColor: '#35605a',
+        backgroundColor: '#990000',
         textAlign: 'center'
     },
     cancelButton: {

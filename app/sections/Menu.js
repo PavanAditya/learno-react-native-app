@@ -27,7 +27,7 @@ export class Menu extends React.Component {
                     </TouchableOpacity>
                 </View >
                 <View style={styles.buttonRow}>
-                    <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
+                    <TouchableOpacity style={styles.buttonStyles} onPress={() => this.props.navigate('QuizRT')}>
                         <Text style={styles.buttonText}>QUIZ</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
@@ -42,7 +42,7 @@ export class Menu extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 6,
-        backgroundColor: '#35605a'
+        backgroundColor: '#660000'
     },
     buttonRow: {
         flex: 2,
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1
     },
     buttonStyles: {
-        backgroundColor: '#35605a',
+        backgroundColor: '#660000',
         width: '50%',
         height: '50%',
         justifyContent: 'center',

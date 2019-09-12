@@ -7,7 +7,7 @@ export class Hero extends React.Component {
         return (
             <Image
                     style={styles.logoStyle}
-                    source={require('./images/mobile-learn.png')}
+                    source={require('./images/Avengers-EndGame-team.jpg')}
                 />
         );
     }

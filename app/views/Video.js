@@ -12,7 +12,7 @@ export class Video extends React.Component {
     }
 
     componentDidMount() {
-        return fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=Marvel%20Entertainment&type=video&key=AIzaSyC3PT_WKdlngPACw49H4rPWJgHChAMExU4')
+        return fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=Captain+America+and+Iron+Man&type=video&key=AIzaSyC3PT_WKdlngPACw49H4rPWJgHChAMExU4')
             .then(response => response.json())
             .then(responseJson => {
                 this.setState({
@@ -56,10 +56,16 @@ export class Video extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
-        paddingTop: 30
+        paddingTop: 30,
+        backgroundColor: 'black'
     },
     video: {
-        paddingTop: 20,
+        padding: 20,
+        margin: 20,
+        borderWidth: 1,
+        borderColor: 'grey',
+        borderRadius: 10,
+        backgroundColor: '#222222',
         alignItems: 'center'
     },
     thumbnail: {
@@ -70,7 +76,7 @@ const styles = StyleSheet.create({
 
 export class TubeItem extends React.Component {
     onPress = () => {
-        this.props.navigate('VideoDetailRT', {youtubeId: this.props.id});
+        this.props.navigate('VideoDetailRT', { youtubeId: this.props.id });
     };
 
     render() {
@@ -81,11 +87,11 @@ export class TubeItem extends React.Component {
                         style={styles.thumbnail}
                         source={{ uri: this.props.imageSrc }}
                     />
-                    <Text>
+                    <Text style={{ color: 'grey' }}>
                         {this.props.title}
                     </Text>
                 </View>
-            </TouchableWithoutFeedback>
+            </TouchableWithoutFeedback >
         );
     }
 }

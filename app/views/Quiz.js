@@ -103,7 +103,7 @@ export class Quiz extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#f5f5f5',
+        backgroundColor: 'black',
         paddingTop: 30
     },
     disabled: {
@@ -126,5 +126,6 @@ const styles = StyleSheet.create({
         marginRight: '5%',
         marginBottom: '5%',
         paddingBottom: '5%',
+        backgroundColor: 'grey'
     }
 });

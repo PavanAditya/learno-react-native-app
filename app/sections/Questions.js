@@ -57,7 +57,7 @@ export class Question extends React.Component {
                         <Text style={styles.answerText}>{this.props.answer1}</Text>
                         <Text style={styles.answerText}>{this.props.answer2}</Text>
                         <Text style={styles.answerText}>{this.props.answer3}</Text>
-                        <Text style={styles.answerText}>{this.props.answer3}</Text>
+                        <Text style={styles.answerText}>{this.props.answer4}</Text>
                         <Text style={styles.answerText}>CORRECT</Text>
                     </View>
                 )}
@@ -67,7 +67,7 @@ export class Question extends React.Component {
                         <Text style={styles.answerText}>{this.props.answer1}</Text>
                         <Text style={styles.answerText}>{this.props.answer2}</Text>
                         <Text style={styles.answerText}>{this.props.answer3}</Text>
-                        <Text style={styles.answerText}>{this.props.answer3}</Text>
+                        <Text style={styles.answerText}>{this.props.answer4}</Text>
                         <Text style={styles.answerText}>INCORRECT</Text>
                     </View>
                 )}

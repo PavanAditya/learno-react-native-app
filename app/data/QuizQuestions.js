@@ -163,13 +163,22 @@ export const QuizData = {
             key: "1R"
         },
         {
+            question: "Who is the avenger who sacrificed his/her life for earning the soul stone?",
+            answer1: "The Ancient One",
+            answer2: 'Black Widow',
+            answer3: 'Hawk Eye',
+            answer4: 'Iron Man',
+            correctAnswer: 'answer2',
+            key: "1S"
+        },
+        {
             question: "'You cut-off one head two will take its place' is the famous slogan of which group",
             answer1: 'Wakandian Group',
             answer2: 'Hydra Group',
             answer3: 'Fugitive Group',
             answer4: 'Antonion Group',
             correctAnswer: 'answer2',
-            key: "1S"
+            key: "1T"
         },
     ]
 }

@@ -98,12 +98,12 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        paddingBottom: '45%',
+        paddingBottom: '25%',
         paddingTop: '10%'
     },
     heading: {
         fontSize: 40,
-        flex: 2
+        flex: 1
     },
     inputs: {
         flex: 1,

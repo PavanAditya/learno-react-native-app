@@ -7,7 +7,7 @@ export class Finish extends React.Component {
     };
 
     exitQuiz = () => {
-        this.props.navigatio.navigate('HomeRT');
+        this.props.navigation.navigate('HomeRT');
     }
 
     render() {
@@ -15,7 +15,7 @@ export class Finish extends React.Component {
         let questionsMissed = this.props.navigation.getParam('missed', 'Error - No missed questions returned');
         let totalQuestions = this.props.navigation.getParam('questions', 'Error - No total questions returned');
         return (
-            <View style={Stylesheet.container}>
+            <View style={styles.container}>
                 <Text>Your Marvel Score was {userScore}</Text>
                 <Text>You missed on {questionsMissed} questions out of {totalQuestions} questions</Text>
 

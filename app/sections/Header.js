@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
         paddingTop: 20,
         textAlign: 'right',
         color: '#ffffff',
-        fontSize: 20
+        fontSize: 15
     },
     headStyle: {
         paddingTop: 20,
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     },
     logoStyle: {
         flex: 1,
-        width: 325
+        width: 275
     },
     logoBrain: {
         width: 80,

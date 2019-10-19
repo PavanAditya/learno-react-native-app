@@ -41,7 +41,8 @@ export class Quiz extends React.Component {
         this.setState({
             totalScore: newScore,
             totalAnswered: totalMissed,
-            questionsAnswered: totalAnswered
+            questionsAnswered: totalAnswered,
+            incorrect: totalMissed
         });
 
         if (totalAnswered === questionsTotal) {
